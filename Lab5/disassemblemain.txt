@@ -1,0 +1,42 @@
+[arch05:~/Desktop/CIS451/Lab5]$ gcc -S exampleIML-1b.c
+[arch05:~/Desktop/CIS451/Lab5]$ ls
+exampleIML-1b.c  exampleIML-1b.s
+[arch05:~/Desktop/CIS451/Lab5]$ vi exampleIML-1b.s
+[arch05:~/Desktop/CIS451/Lab5]$ gcc -g exampleIML-1b.s -o ex1
+[arch05:~/Desktop/CIS451/Lab5]$ gdb ex1
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-94.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/paquett/Desktop/CIS451/Lab5/ex1...done.
+(gdb) disassemble main
+Dump of assembler code for function main:
+   0x000000000040052d <+0>:	push   %rbp
+   0x000000000040052e <+1>:	mov    %rsp,%rbp
+   0x0000000000400531 <+4>:	sub    $0x10,%rsp
+   0x0000000000400535 <+8>:	movl   $0x52c,-0x4(%rbp)
+   0x000000000040053c <+15>:	movl   $0x1619,-0x8(%rbp)
+   0x0000000000400543 <+22>:	movl   $0x2694,-0xc(%rbp)
+   0x000000000040054a <+29>:	movl   $0x8ad,-0x10(%rbp)
+   0x0000000000400551 <+36>:	mov    -0x8(%rbp),%eax
+   0x0000000000400554 <+39>:	mov    -0x4(%rbp),%edx
+   0x0000000000400557 <+42>:	sub    %eax,%edx
+   0x0000000000400559 <+44>:	mov    %edx,%eax
+   0x000000000040055b <+46>:	mov    %eax,-0xc(%rbp)
+   0x000000000040055e <+49>:	mov    -0xc(%rbp),%ecx
+   0x0000000000400561 <+52>:	mov    -0x8(%rbp),%edx
+   0x0000000000400564 <+55>:	mov    -0x4(%rbp),%eax
+   0x0000000000400567 <+58>:	mov    %eax,%esi
+   0x0000000000400569 <+60>:	mov    $0x400610,%edi
+   0x000000000040056e <+65>:	mov    $0x0,%eax
+   0x0000000000400573 <+70>:	callq  0x400410 <printf@plt>
+   0x0000000000400578 <+75>:	mov    %eax,-0x10(%rbp)
+   0x000000000040057b <+78>:	mov    -0xc(%rbp),%eax
+   0x000000000040057e <+81>:	leaveq 
+   0x000000000040057f <+82>:	retq   
+End of assembler dump.

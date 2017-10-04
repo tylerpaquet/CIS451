@@ -1,0 +1,10 @@
+#addi, lui, ori, add, beq, j, lw, sw, and halt
+
+lui $8, 8439
+lui $9, 28
+addi $10, $9, 321
+addi $11, $10, 5432
+add $12, $11, $10
+add $13, $12, $11
+ori $14, $13, 9761
+ori $15, $14, 728

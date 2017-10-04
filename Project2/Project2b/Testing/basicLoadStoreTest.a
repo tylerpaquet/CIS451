@@ -1,0 +1,30 @@
+###############################
+#	Kristian Trevino		  #
+#	Tyler Paquet			  #
+###############################
+	
+.data
+val1:	1983
+val2:	2007
+val3:	-1
+val4:	-70000
+
+.text
+
+# Remember, this is a pseudo instruction!
+lw $8, val1
+lw $9, val2
+lw $10, val3
+lw $11, val4
+
+#addi $8, $8, 17
+#addi $12, $11, 70000
+
+# store the value in val2 (remember, this is a pseduo instruction)
+sw   $8, val2
+
+# store the value in val4
+sw   $10, val4
+
+# store the value in val3
+sw   $12, val3
